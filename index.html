@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08111f">
+  <meta name="description" content="Faruk Hossain’s Portfolio Website">
+  
+  <title>Faruk Hossain | Portfolio</title>
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem("theme");
+        const preferred = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.dataset.theme = saved || preferred;
+      } catch (_) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- EmailJS SDK CDN -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      // আপনার EmailJS Public Key এখানে দিন (নিচে নির্দেশিকা দেওয়া আছে)
+      emailjs.init("y3NIwogs17oImIsQF");
+    })();
+  </script>
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="top-controls" aria-label="Display controls">
+    <button class="icon-btn" id="homeBtn" type="button" aria-label="Return to cover" title="Cover">
+      <i class="bx bx-home-alt-2" aria-hidden="true"></i>
+    </button>
+    <p class="control-hint" id="viewHint">Faruk Hossain’s Portfolio</p>
+    <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch color theme" title="Switch theme">
+      <i class="bx bx-sun" aria-hidden="true"></i>
+    </button>
+  </header>
+  
+  <main class="stage">
+    <div class="book-shell" id="bookShell">
+      <div class="book" id="book" aria-label="portfolio book">
+        <section class="cover" id="frontCover" aria-label="Portfolio cover">
+          <img class="physical-cover-image" src="./hardcover.png" alt="Realistic navy-blue and gold hardcover book">
+          <div class="cover-content">
+            
+            <div class="cover-mark" aria-hidden="true"><i class="bx bx-book-bookmark"></i></div>
+            <h1>Faruk <span>Hossain</span></h1>
+            <p>SALES | CUSTOMER SERVICE | BUSINESS DEVELOPMENT</p>
+            <p class="cover-description">Motivated, dependable, sales professional.</p>
+            <button class="primary-btn" id="openBookBtn" type="button">
+              Discover Me <i class="bx bx-book-open" aria-hidden="true"></i>
+            </button>
+            
+          </div>
+        </section>
+        
+        <div class="pages" id="pages">
+          <section class="profile-page paper page-left" id="profilePage" aria-label="Profile">
+            <div class="profile-inner">
+              <div class="avatar-wrap">
+                <img src="./photo.jpg" alt="Portrait of Faruk Hossain" class="avatar" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+                <span class="avatar-fallback" aria-hidden="true">Faruk</span>
+              </div>
+              <p class="eyebrow accent">HELLO, I'M</p>
+              <h2>Faruk Hossain</h2>
+              <h3 class="role">SALES | CUSTOMER SERVICE | BUSINESS DEVELOPMENT</h3>
+              <p class="bio">To start and grow a professional career in Sales, Customer Service, or Business Development by applying strong communication,
+                customer-handling, negotiation, and time-management skills. I am eager to learn, take responsibility, work with a team, and contribute to achieving
+                organizational goals.</p>
+              <div class="social-links" aria-label="Social profiles">
+                <a href="https://www.facebook.com/FDMCB" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+                
+                <a href="#" class="social-link" aria-label="YouTube">
+                  <i class="bx bxl-youtube"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="GitHub">
+                  <i class="bx bxl-github"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <i class="bx bxl-instagram"></i>
+                </a>
+              </div>
+              
+              
+              <div class="contact-details">
+                <p><i class="bx bx-map"></i><span>Monohargonj, Cumilla, Bangladesh</span></p>
+                <p><i class="bx bx-envelope"></i><span>farukhossainsfmmtbd04@gmail.com</span></p>
+                <p><i class="bx bx-phone"></i><span>+880 1617798730</span></p>
+              </div>
+              <div class="button-row profile-actions">
+                <a class="button secondary-btn" href="./Faruk_Hossain_CV.pdf" download>
+                  Download CV
+                </a>
+                <button class="button" type="button" data-goto="5">Contact me</button>
+              </div>
+              
+            </div>
+          </section>
+          
+          <section class="turn-page" id="turn-1" data-page="1" aria-label="Experience and education">
+            <article class="page-face page-front paper">
+              <div class="page-content">
+                <p class="eyebrow accent">THE JOURNEY</p>
+                <h2 class="section-title">Work Experience</h2>
+                <p class="project-description">Sales & Customer Service Professional
+                  Career Focus: Sales | Customer Service | Business Development</p>
+                <br>
+                <div class="timeline">
+                  
+                  <div class="timeline-item">
+                    <span class="date"><i class="bx bx-calendar"></i>Present</span>
+                    <h3>Customer Relationship Management</h3>
+                    <h4>Level 4. Team Leader / Supervisor</h4>
+                    <p>Building strong customer relationships through trust, engagement, and personalized service.</p>
+                  </div>
+                  
+                  <div class="timeline-item">
+                    <span class="date"><i class="bx bx-calendar"></i> Present</span>
+                    <h3>Sales & Business Development</h3>
+                    <h4>Level 3. Senior Executive / Specialist</h4>
+                    <p>Identifying growth opportunities, promoting products, and driving business success.</p>
+                  </div>
+                  
+                  <div class="timeline-item">
+                    <span class="date"><i class="bx bx-calendar"></i> Present</span>
+                    <h3>Customer Support & Communication</h3>
+                    <h4>Level 4. Team Leader / Supervisor</h4>
+                    <p>Delivering excellent customer experiences through effective communication and problem-solving.</p>
+                  </div>
+                  
+                </div>
+              </div>
+              
+              <button class="page-nav next" type="button" data-turn="1" aria-label="Next page"><i class="bx bx-chevron-right"></i></button>
+            </article>
+            <article class="page-face page-back paper">
+              <div class="page-content">
+                <p class="eyebrow accent">LEARNING</p>
+                <h2 class="section-title">Education</h2>
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <span class="date"><i class="bx bx-calendar"></i> 2020 — 2021</span>
+                    <h3>Higher Secondary Certificate (HSC)</h3>
+                    <h4>Monohargonj Govt. High School & College </h4>
+                    <p>Grade: A-</p>
+                  </div>
+                  <div class="timeline-item">
+                    <span class="date"><i class="bx bx-calendar"></i> 2018 — 2019</span>
+                    <h3>Secondary School Certificate (SSC)</h3>
+                    <h4>Monohargonj Govt. High School & College</h4>
+                    <p>Grade: A-</p>
+                  </div>
+                </div>
+              </div>
+              
+              <button class="page-nav prev" type="button" data-turn="1" aria-label="Previous page"><i class="bx bx-chevron-left"></i></button>
+            </article>
+          </section>
+          
+          <section class="turn-page is-turned" id="turn-2" data-page="2" aria-label="Services and skills">
+            <article class="page-face page-front paper">
+              <div class="page-content">
+                <p class="eyebrow accent">WHAT I DO</p>
+                <h2 class="section-title">My Services</h2>
+                <div class="service-grid">
+                  <div class="service-card"><i class="bx bx-trending-up"></i>
+                    <h3>Sales & Lead Generation</h3>
+                    <p>Identifying potential customers and generating business opportunities.</p>
+                  </div>
+                  
+                  <div class="service-card"><i class="bx bx-support"></i>
+                    <h3>Customer Relationship Management</h3>
+                    <p>Building strong customer relationships and ensuring satisfaction.</p>
+                  </div>
+                  
+                  <div class="service-card"><i class="bx bx-line-chart"></i>
+                    <h3>Business Development</h3>
+                    <p>Identifying growth opportunities and supporting business expansion.</p>
+                  </div>
+                  
+                  <div class="service-card"><i class="bx bx-bar-chart-alt-2"></i>
+                    <h3>Market Research & Analysis</h3>
+                    <p>Understanding market trends, customer needs, and competitors.</p>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <button class="button" type="button" data-goto="5">Contact me</button>
+            </article>
+            
+          </section>
+          
+          <section class="turn-page is-turned" id="turn-3" data-page="3" aria-label="Projects and contact">
+            
+            <article class="page-face page-back paper">
+              <div class="page-content">
+                <p class="eyebrow accent">LET'S CONNECT</p>
+                <h2 class="section-title">Contact Me</h2>
+                <p class="contact-intro">Send your message.</p>
+                <form class="contact-form" id="contactForm">
+                  <label for="fullName">Full name</label><input id="fullName" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+                  <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                  <label for="message">Message</label><textarea id="message" name="message" rows="3" placeholder="How can I help?" required></textarea>
+                  
+                  <!-- EmailJS compatible submit button -->
+                  <button class="button submit-btn" id="submitBtn" type="submit">Send Message <i class="bx bx-send"></i></button>
+                  <p class="form-note" id="formNote" role="status">Send message directly to my email</p>
+                </form>
+                <div class="contact-mini"><span><i class="bx bx-envelope"></i> farukhossainsfmmtbd04@gmail.com</span><span><i class="bx bx-map"></i> Bangladesh</span></div>
+              </div>
+              
+              <button class="page-nav prev" type="button" data-turn="3" aria-label="Previous page"><i class="bx bx-chevron-left"></i></button>
+            </article>
+            
+          </section>
+          
+          
+        </div>
+      </div>
+    </div>
+    <nav class="mobile-navigation" id="mobileNavigation" aria-label="Portfolio pages">
+      <button type="button" id="mobilePrev" aria-label="Previous section"><i class="bx bx-chevron-left"></i></button>
+      <span id="mobilePageLabel">Cover</span>
+      <button type="button" id="mobileNext" aria-label="Next section"><i class="bx bx-chevron-right"></i></button>
+    </nav>
+    <p class="desktop-hint" id="desktopHint">Use the arrows to turn pages · Home returns to the cover</p>
+  </main>
+</body>
+
+</html>
